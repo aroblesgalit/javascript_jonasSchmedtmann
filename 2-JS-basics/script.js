@@ -135,16 +135,21 @@ calculated using the formula: BMI = mass / height^2 = mass / (height * height).
 GOOD LUCK :)
 */
 
+/*
+My solution
+*/
+
 // 1
 var johnMass, johnHeight, johnBMI, markMass, markHeight, markBMI, markHigher;
-johnMass = 30;
-johnHeight = 40;
-markMass = 20;
-markHeight = 30;
+johnMass = 92;
+johnHeight = 1.95;
+markMass = 78;
+markHeight = 1.69;
 
 // 2
 johnBMI = johnMass / (johnHeight * johnHeight);
 markBMI = markMass /(markHeight * markHeight);
+console.log(johnBMI, markBMI);
 
 // 3
 markHigher = markBMI > johnBMI;
@@ -153,4 +158,19 @@ markHigher = markBMI > johnBMI;
 console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
 
 
+/*
+Instructor's solution
+*/
+var massMark = 78; // kg
+var heightMark = 1.69 // meters
+
+var massJohn = 92;
+var heightJohn = 1.95;
+
+var BMIMark = massMark / (heightMark * heightMark);
+var BMIJohn = massJohn/ (heightJohn * heightJohn);
+console.log(johnBMI, markBMI);
+
+var markHigherBMI = BMIMark > BMIJohn;
+console.log('Is Mark\'s BMI higher than John\'s? ' + markHigherBMI);
 
