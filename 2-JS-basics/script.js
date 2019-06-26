@@ -298,7 +298,7 @@ switch (true) {
 
 // falsy values: undefined, null, 0, '', NaN
 // truthy values: NOT falsy values
-
+/*
 var height;
 
 height = 23;
@@ -313,7 +313,98 @@ if (height || height === 0) {
 if (height == '23') {
     console.log('The == operator does type coercion!');
 }
+*/
 
+
+
+/******************************
+* CODING CHALLENGE 2
+*/
+
+/*
+John and Mike both play basketball in different teams. In the latest 3 games,
+John's team scored 89, 120 and 103 points, while Mike's team scored 116, 94
+and 123 points.
+
+1. Calculate the average score for each team
+2. Decide which teams wins in average (highest average score), and print the
+winner to the console. Also include the average score in the output.
+3. Then change the scores to show different winners. Don't forget to take into
+account there might be a draw (the same average score)
+
+4. EXTRA: Mary also plays basketball, and her team scored 97, 134 and 105
+points. Like before, log the average winner to the console. HINT: you will
+need the && operator to take the decision. If you can't solve this one, just
+watch the solution, it's no problem :)
+5. Like before, change the scores to generate different winners, keeping in
+mind there might be draws.
+
+GOOD LUCK :)
+*/
+
+
+/*
+My solution
+*/
+
+// 1
+var avgJohn = (89 + 120 + 103) / 3;
+var avgMike = (116 + 94 + 123) / 3;
+console.log('John: ' + avgJohn + ' - ' + 'Mike: ' + avgMike);
+
+// 2
+if (avgJohn > avgMike) {
+    console.log('John\'s team wins in average with a value of ' + avgJohn);
+} else if (avgJohn === avgMike) {
+    console.log('Both team has the same average score of ' + avgJohn + '. It\'s a draw!');
+} else {
+    console.log('Mike\'s team wins in average with a value of ' + avgMike);
+}
+
+// 3
+var avgJohn = (94 + 120 + 113) / 3;
+var avgMike = (110 + 94 + 102) / 3;
+console.log('John: ' + avgJohn + ' - ' + 'Mike: ' + avgMike);
+
+if (avgJohn > avgMike) {
+    console.log('John\'s team wins in average with a value of ' + avgJohn);
+} else if (avgJohn === avgMike) {
+    console.log('Both team has the same average score of ' + avgJohn + '. It\'s a draw!');
+} else {
+    console.log('Mike\'s team wins in average with a value of ' + avgMike);
+}
+
+// 4
+var avgJohn = (94 + 120 + 113) / 3;
+var avgMike = (110 + 94 + 102) / 3;
+var avgMary = (97 + 134 + 105) / 3;
+console.log('John: ' + avgJohn + ' - ' + 'Mike: ' + avgMike + ' - ' + 'Mary: ' + avgMary);
+
+if (avgJohn > avgMike && avgJohn > avgMary) {
+    console.log('John\'s team wins in average with a value of ' + avgJohn);
+} else if (avgMary > avgMike && avgMary > avgJohn) {
+    console.log('Mary\'s team wins in average with a value of ' + avgMary);
+} else if (avgJohn === avgMike && avgJohn === avgMary) {
+    console.log('All 3 team has the same average score of ' + avgJohn + '. It\'s a draw!');
+} else {
+    console.log('Mike\'s team wins in average with a value of ' + avgMike);
+}
+
+// 5
+var avgJohn = (94 + 120 + 113) / 3;
+var avgMike = (115 + 105 + 107) / 3;
+var avgMary = (97 + 125 + 105) / 3;
+console.log('John: ' + avgJohn + ' - ' + 'Mike: ' + avgMike + ' - ' + 'Mary: ' + avgMary);
+
+if (avgJohn > avgMike && avgJohn > avgMary) {
+    console.log('John\'s team wins in average with a value of ' + avgJohn);
+} else if (avgMary > avgMike && avgMary > avgJohn) {
+    console.log('Mary\'s team wins in average with a value of ' + avgMary);
+} else if (avgJohn === avgMike && avgJohn === avgMary) {
+    console.log('All 3 team has the same average score of ' + avgJohn + '. It\'s a draw!');
+} else {
+    console.log('Mike\'s team wins in average with a value of ' + avgMike);
+}
 
 
 
