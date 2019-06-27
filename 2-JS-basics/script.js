@@ -578,9 +578,8 @@ tipCalculator(billsJohn[2]);
 
 console.log(tips, final);
 */
-
+/*
 // Instructor's solution
-
 function tipCalculator(bill) {
     var percentage;
     if (bill < 50) {
@@ -602,6 +601,53 @@ var finalValues = [bills[0] + tips[0],
                     bills[2] + tips[2]];
 
 console.log(tips, finalValues);
+*/
+
+
+
+/******************************
+* Objects and properties
+*/
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
