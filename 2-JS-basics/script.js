@@ -678,7 +678,7 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and
 
 GOOD LUCK :)
 */
-
+/*
 // My solution
 
 // 1 & 2
@@ -713,9 +713,38 @@ if (Mark.bmi > John.bmi) {
 } else {
     console.log('They have the same BMI of ' + Mark.bmi);
 }
+*/
 
 
+// Instructor's solution
 
+var john = {
+    fullName: 'John Smith',
+    mass: 110,
+    height: 1.95,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+var mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(john.fullName + ' has a higher BMI of ' + john.bmi);
+} else if (mark.bmi > john.bmi) {
+    console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi);
+} else {
+    console.log('They have the same BMI');
+}
 
 
 
