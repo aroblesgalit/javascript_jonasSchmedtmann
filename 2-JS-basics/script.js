@@ -717,7 +717,7 @@ if (Mark.bmi > John.bmi) {
 
 
 // Instructor's solution
-
+/*
 var john = {
     fullName: 'John Smith',
     mass: 110,
@@ -745,12 +745,44 @@ if (john.calcBMI() > mark.calcBMI()) {
 } else {
     console.log('They have the same BMI');
 }
+*/
 
 
 
+/******************************
+* Loops and iteration
+*/
+
+// For loop
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+// ...
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 FALSE, exit the loop!
+
+for (var i = 1; i <= 20; i += 2) {
+    console.log(i); // logs to the console 1, 3, 5, ... 19
+}
 
 
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (var i = 0; i < john.length; i++) {
+    console.log(john[i]);
+}
 
+// While loop
+var i = 0;
+while(i < john.length) {
+    console.log(john[i]);
+    i++;
+}
+
+
+// continue and break statements
 
 
 
