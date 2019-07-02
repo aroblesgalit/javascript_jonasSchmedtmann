@@ -920,7 +920,7 @@ if (avgJohn > avgMark) {
 
 
 // Instructor's solution
-
+/*
 var john = {
     fullName: 'John Smith',
     bills: [124, 48, 268, 180, 42],
@@ -996,6 +996,9 @@ if (john.average > mark.average) {
 } else if (mark.average > john.average) {
     console.log(mark.fullName + '\'s family pays higher tips, with an average of $' + mark.average);
 }
+*/
+
+
 
 
 
