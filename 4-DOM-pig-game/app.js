@@ -16,10 +16,9 @@ roundScore = 0;
 activePlayer = 0;
 
 dice = Math.floor(Math.random() * 6) + 1;
-console.log(dice);
 
-
-
+document.querySelector('#current-' + activePlayer).textContent = dice;
+// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
 
 
 
