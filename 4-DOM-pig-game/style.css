@@ -141,6 +141,31 @@ i {
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
+.winning-score {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EB4D4D;
+    padding: 10px;
+    text-align: center;
+}
+
+label[for="winning-score"] {
+    font-size: 12px;
+}
+
+#winning-score {
+    height: 30px;
+    width: 96px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 4px;
+    color: #222;
+    font-size: 18px;
+    text-align: center;
+}
+
 .dice {
     position: absolute;
     left: 50%;
