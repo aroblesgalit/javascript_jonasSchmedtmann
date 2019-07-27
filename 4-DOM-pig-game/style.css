@@ -173,20 +173,19 @@ label[for="winning-score"] {
 
 .dice {
     position: absolute;
-    left: 44%;
+    left: 50%;
     top: 178px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.dice-two {
-    position: absolute;
+#dice-1 {
+    left: 44%;
+}
+
+#dice-2 {
     left: 56%;
-    top: 178px;
-    transform: translateX(-50%);
-    height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
 .winner { background-color: #f7f7f7; }
