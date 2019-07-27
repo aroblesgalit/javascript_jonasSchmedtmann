@@ -340,7 +340,7 @@ function init() {
 }
 */
 
-
+/*
 // CHALLENGE 3
 var scores, roundScore, activePlayer, gamePlaying, winningScore;
 
@@ -452,7 +452,7 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
 }
-
+*/
 
 
 
