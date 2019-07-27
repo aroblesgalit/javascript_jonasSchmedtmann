@@ -149,6 +149,7 @@ i {
     background-color: #EB4D4D;
     padding: 10px;
     text-align: center;
+    font-family: 'Lato';
 }
 
 label[for="winning-score"] {
@@ -164,6 +165,10 @@ label[for="winning-score"] {
     color: #222;
     font-size: 18px;
     text-align: center;
+}
+
+#winning-score:focus {
+    outline: none;
 }
 
 .dice {
