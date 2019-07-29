@@ -53,6 +53,20 @@ PRACTICE: Create your own constructor function and add methods and properties
 to its prototype.
 */
 
+var Bills = function(rent, studentLoans, phone, car) {
+    this.rent = rent;
+    this.studentLoans = studentLoans;
+    this.phone = phone;
+    this.car = car;
+};
+
+Bills.prototype.calculateTotal = function() {
+    return this.rent + this.studentLoans + this.phone + this.car;
+};
+
+var july = new Bills(1230, 470, 85, 380);
+console.log(july);
+
 
 
 
