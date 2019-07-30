@@ -22,7 +22,7 @@ var john = {
     job: 'teacher'
 };
 */
-
+/*
 var Person = function(name, yearOfBirth, job) {
     this.name = name;
     this.yearOfBirth = yearOfBirth;
@@ -46,13 +46,13 @@ mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
-
+*/
 
 /*
 PRACTICE: Create your own constructor function and add methods and properties
 to its prototype.
 */
-
+/*
 var Bills = function(rent, studentLoans, phone, car) {
     this.rent = rent;
     this.studentLoans = studentLoans;
@@ -66,9 +66,27 @@ Bills.prototype.calculateTotal = function() {
 
 var july = new Bills(1230, 470, 85, 380);
 console.log(july);
+*/
 
 
 
+// Object.create
+var personProto = {
+    calculateAge: function() {
+        console.log(2016 - this.yearOfBrith)
+    }
+};
+
+var john = Object.create(personProto);
+john.name = 'John';
+john.yearOfBrith = 1990;
+john.job = 'teacher';
+
+var jane = Object.create(personProto, {
+    name: { value: 'Jane' },
+    yearOfBrith: { value: 1969 },
+    job: { value: 'designer' }
+});
 
 
 
