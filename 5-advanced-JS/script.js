@@ -196,6 +196,27 @@ interviewQuestion('teacher')('Mark');
 */
 
 
+// practice function returning functions
+
+function workout(day) {
+    if (day === 'Monday') {
+        return function(level) {
+            console.log('It\'s ' + day + ', so let\'s do some ' + level + ' workout for our chest.');
+        }
+    } else if (day === 'Tuesday') {
+        return function(level) {
+            console.log('It\'s ' + day + ', so let\'s do some ' + level + ' workout for our back.');
+        }
+    } else {
+        return function(level) {
+            console.log('It\'s ' + day + ', so let\'s do some ' + level + ' workout for our legs.');
+        }
+    }
+}
+
+workout('Monday')('easy');
+workout('Tuesday')('intense');
+workout('Wednesday')('short');
 
 
 
