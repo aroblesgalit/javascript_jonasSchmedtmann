@@ -468,7 +468,7 @@ Question.prototype.randomQuestion = function() {
     }
 };
 
-question1.randomQuestion();
+(question1.randomQuestion)();
 
 /*
 Person.prototype.calculateAge = function() {
