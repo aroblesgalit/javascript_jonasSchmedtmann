@@ -454,6 +454,12 @@ var question2 = new Question(
 
 var questions = [question0, question1, question2];
 
+var score = 0;
+
+Question.prototype.currentScore = function() {
+    console.log('Score: ' + score);
+}
+
 Question.prototype.randomQuestion = function() {
     var random = Math.round(Math.random() * 2);
     console.log(questions[random].question);
@@ -462,25 +468,25 @@ Question.prototype.randomQuestion = function() {
     }
     var userInput = prompt(questions[random].question);
     if (userInput === questions[random].correctAnswer) {
-        console.log('Correct!')
+        console.log('Correct!');
+        score += 1;
+        questions[random].currentScore();
+        nextQuestion();
+    } else if (userInput === 'exit') {
+        console.log('You\'ve exited the game.');
     } else {
-        console.log('Sorry, that is not the right answer.')
+        console.log('Sorry, that is not the right answer.');
+        questions[random].currentScore();
+        nextQuestion();
     }
+    
 };
 
 (question1.randomQuestion)();
 
-/*
-Person.prototype.calculateAge = function() {
-    console.log(2019 - this.yearOfBirth);
-};
-
-Person.prototype.lastName = 'Smith';
-
-var john = new Person('John', 1990, 'teacher');
-var jane = new Person('Jane', 1969, 'designer');
-var mark = new Person('Mark', 1948, 'retired');
-*/
+function nextQuestion() {
+    question1.randomQuestion();
+}
 
 
 
