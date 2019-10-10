@@ -224,7 +224,7 @@ new Person('Mike').myFriends6(friends);
 
 ///////////////////////////////////
 // Lecture: Destructuring
-
+/*
 // ES5
 var john = ['John', 26];
 // var name = john[0];
@@ -258,6 +258,70 @@ function calcAgeRetirement(year) {
 const [age2, retirement] = calcAgeRetirement(1990);
 console.log(age2);
 console.log(retirement);
+*/
+
+
+
+///////////////////////////////////
+// Lecture: Arrays
+
+const boxes = document.querySelectorAll('.box');
+/*
+// ES5 - Creating an array and changing each background color to dodgerblue
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+    cur.style.backgroundColor = 'dodgerblue';
+});
+*/
+
+// ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(cur => cur.style.backgroundColor = 'dodgerblue');
+
+/*
+or
+Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
+*/
+/*
+// ES5 - Creating an array and changing each text to I'm blue!
+for(var i = 0; i < boxesArr5.length; i++) {
+
+    if(boxesArr5[i].className === 'box blue') {
+        continue;
+    }
+
+    boxesArr5[i].textContent = 'I changed to blue!';
+
+}
+*/
+
+// ES6
+for (const cur of boxesArr6) {
+    if (cur.className.includes('blue')) {
+        continue;
+    }
+    cur.textContent = 'I changed to blue!';
+}
+
+
+
+// ES5 - Have an array of ages and only 1 is of full age. Find out the index and the value
+var ages = [12, 17, 8, 21, 14, 11];
+
+var full = ages.map(function(cur) {
+    return cur >= 18;
+});
+console.log(full);
+
+console.log(full.indexOf(true));
+console.log(ages[full.indexOf(true)]);
+
+
+// ES6
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
+
+
 
 
 
